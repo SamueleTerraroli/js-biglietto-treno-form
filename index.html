@@ -6,32 +6,72 @@
     <title>Biglietto Treno</title>
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
-<body>
+<body class="t-center my-20">
     <header>
-        <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+        <h2 class="t-white">CALCOLA IL PREZZO DEL BIGLIETTO</h2>
     </header>
     <main>
-        <div class="container">
+        <div class="container t-left">
             <form>
-                <label for="fullName">Inserisci nome e cognome:</label><br>
-                <input type="text" id="fullName" name="fullName"><br>
+                <div class="col">
+                    <label for="fullName">Inserisci nome e cognome:</label><br>
+                    <input class="btn" type="text" id="fullName" name="fullName"><br>
+                </div>
+                <div class="col">
+                    <label for="distance">Inserisci i Km da percorrere:</label><br>
+                    <input class="btn" type="text" id="distance" name="distance">
+                </div>
+                <div class="col">
+                    <label for="age">Seleziona fascia d'età:</label> <br>
 
-                <label for="distance">Inserisci i Km da percorrere:</label><br>
-                <input type="text" id="distance" name="distance">
+                    <select class="btn" name="age" id="age">
+                        <option value="u18">Under 18</option>
+                        <option value="adult">18-59 anni</option>
+                        <option value="senior">Over 60 </option>
+                    </select>
+                </div>
 
-                <label for="age">Seleziona fascia d'età:</label>
-
-                <select name="age" id="age">
-                    <option value="u18">Under 18</option>
-                    <option value="adult">18-59 anni</option>
-                    <option value="senior">Over 60 </option>
-                </select>
-
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
+                <div class="col click">
+                    <input class="btn submit" type="submit">
+                    <input class="btn" type="reset" value="Reset">
+                </div>
+                
             </form>
         </div>
     </main>
+    <footer class="hide">
+        <h2 class="t-white">IL TUO BIGLIETTO</h2>
+        <div class="container t-left">
+            <div class="col">
+                <h2> Riepilogo</h2>
+            </div>
+            
+            <div class="d-flex my-20 b-top">
+                <div class="col my-20">
+                    <h3>Nome passeggero</h3>
+                    <p class="name-ticket"></p>
+                </div>
+                <div class="col my-20">
+                    <h3>Offerta</h3>
+                    <p class="ticket-type"></p>
+                </div>
+                <div class="col my-20">
+                    <h3>Carrozza</h3>
+                    <p class="carriage"></p>
+                </div>
+                <div class="col my-20">
+                    <h3>Codice CP</h3>
+                    <p class="ticket-code"></p>
+                </div>
+                <div class="col my-20">
+                    <h3>Costo biglietto</h3>
+                    <p class="price"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
   
     
     <script src="assets/script/script.js"></script>
