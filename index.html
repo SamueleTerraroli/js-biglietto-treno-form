@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
+    <header>
+        <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <label for="fullName">Inserisci nome e cognome:</label><br>
+                <input type="text" id="fullName" name="fullName"><br>
+
+                <label for="distance">Inserisci i Km da percorrere:</label><br>
+                <input type="text" id="distance" name="distance">
+
+                <label for="age">Seleziona fascia d'età:</label>
+
+                <select name="age" id="age">
+                    <option value="u18">Under 18</option>
+                    <option value="adult">18-59 anni</option>
+                    <option value="senior">Over 60 </option>
+                </select>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+    </main>
   
     
     <script src="assets/script/script.js"></script>
