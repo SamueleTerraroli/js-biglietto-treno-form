@@ -39,23 +39,20 @@ form.addEventListener('submit', (event) => { //prevengo l'invio del form prima c
         let price = (21 / 100) * km;
         if (ageRange === 'u18') {
              price = price * (1 - 20 / 100);
+             ticketType.innerText = 'Sconto Under 18';
         } else if (ageRange === 'senior') {
             price = price * (1 - 40 / 100);
+            ticketType.innerText = 'Sconto Over 60';
         } else {
-            price = price; 
+            price = price;
+            ticketType.innerText = 'Biglietto standard'; 
         } 
         return price.toFixed(2); // Formatto a due cifre decimali con toFixed()
         }
         fullPrice.innerText =`${priceCalculator(distance, age)} € tasse comprese` ;
     
         ticketName.innerText = fullName.trim();
-        if(age === 'u18'){
-            ticketType.innerText = 'Sconto Under 18';
-        } else if(age === 'senior'){
-            ticketType.innerText = 'Sconto Over 60';
-        } else{
-            ticketType.innerText = 'Biglietto standard';
-        }
+        
         confirm.value = 'Conferma';
         showFooter.classList.remove('hide');
         
@@ -64,22 +61,3 @@ form.addEventListener('submit', (event) => { //prevengo l'invio del form prima c
 
 
 });
-
-
-
-
-
-
-
-
-
-//debug
-/*let età = 40;
-console.log("Età:", età ,"Anni");
-let distanza = 50;
-console.log("Distanza:", distanza,"Km");
-*/
-
-/*let price = (21/100) * distanza;
-const discountUnder = 20;
-const discountOver = 40;*/
